@@ -1,21 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View, SafeAreaView, ScrollView } from "react-native";
+import Categories from "./components/Categories";
+import HeaderComponent from "./components/Header";
+import RestaurantItem from "./components/RestaurantItem";
+import SearchBar from "./components/SearchBar";
+import { Divider } from "react-native-elements";
+import BottomTabs from "./components/BottomTabs";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView
+      style={{
+        backgroundColor: "#eee",
+        height: "100%",
+        flex: 1,
+        flexDirection: "column",
+      }}
+    >
+      <View style={{ backgroundColor: "white", padding: 10 }}>
+        <HeaderComponent />
+        <SearchBar />
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <Categories />
+          <RestaurantItem />
+        </ScrollView>
+        <Divider width={1} />
+        <BottomTabs />
+      </View>
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
