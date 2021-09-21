@@ -9,6 +9,7 @@ export default function SearchBar() {
     <View
       style={{
         marginTop: 10,
+        marginBottom: 10,
         flexDirection: "row",
       }}
     >

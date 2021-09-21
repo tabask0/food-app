@@ -12,21 +12,19 @@ export default function App() {
     <SafeAreaView
       style={{
         backgroundColor: "#eee",
-        height: "100%",
         flex: 1,
-        flexDirection: "column",
       }}
     >
-      <View style={{ backgroundColor: "white", padding: 10 }}>
+      <View style={{ backgroundColor: "white", padding: 15 }}>
         <HeaderComponent />
         <SearchBar />
-        <ScrollView showsVerticalScrollIndicator={false}>
-          <Categories />
-          <RestaurantItem />
-        </ScrollView>
-        <Divider width={1} />
-        <BottomTabs />
       </View>
+      <ScrollView showsVerticalScrollIndicator={false} style={{ padding: 10 }}>
+        <Categories />
+        <RestaurantItem />
+      </ScrollView>
+      <Divider width={1} />
+      <BottomTabs />
     </SafeAreaView>
   );
 }

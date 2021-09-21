@@ -13,9 +13,12 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bucur37.food-app"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +28,8 @@
     },
     "web": {
       "favicon": ""
-    }
+    },
+    "description": "My first React Native app, a food app.",
+    "githubUrl": "https://github.com/tabask0/food-app"
   }
 }
